@@ -29,4 +29,13 @@ dev_dependencies:
   riverpod_lint: ^2.3.10
 
 flutter:
+  assets:
+    - assets/launcher-icon.png
+
   uses-material-design: true
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  remove_alpha_ios: true
+  image_path: 'assets/launcher-icon.png'
