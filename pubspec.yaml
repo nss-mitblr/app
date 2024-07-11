@@ -12,7 +12,7 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.6
-  flutter_native_splash: ^2.4.0
+  flutter_native_splash: ^2.4.1
   flutter_riverpod: ^2.5.1
   riverpod_annotation: ^2.3.5
   freezed_annotation: ^2.4.1
@@ -31,11 +31,6 @@ dev_dependencies:
 flutter:
   assets:
     - assets/launcher-icon.png
+    - assets/splash/
 
   uses-material-design: true
-
-flutter_launcher_icons:
-  android: "launcher_icon"
-  ios: true
-  remove_alpha_ios: true
-  image_path: 'assets/launcher-icon.png'
