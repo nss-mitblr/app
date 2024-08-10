@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 
-import 'package:nss/components/loading_icon.dart';
+import 'package:nss/src/navigation/views/navigation_view.dart';
 
 class SubmitButton extends StatefulWidget {
   @override
@@ -26,7 +26,7 @@ class _SubmitButtonState extends State<SubmitButton> {
                 (value) => {
                   Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
-                      builder: (context) => LoadingIcon(),
+                      builder: (context) => NavigationView(),
                     ),
                   ),
                 },
