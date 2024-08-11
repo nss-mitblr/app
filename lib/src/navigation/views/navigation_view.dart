@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:nss/src/events/views/event_view.dart';
 import 'package:nss/src/home/views/home_view.dart';
 import 'package:nss/src/navigation/components/keep_alive_page.dart';
+import 'package:nss/src/navigation/components/theme_switcher.dart';
 import 'package:nss/src/profile/views/profile_view.dart';
 
 class NavigationView extends StatefulWidget {
@@ -43,14 +44,7 @@ class _NavigationViewState extends State<NavigationView> {
                   width: 48,
                 ),
                 actions: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.tune,
-                      weight: 200,
-                      color: colorScheme.onSurface,
-                    ),
-                  ),
+                  ThemeSwitcher(),
                 ],
                 elevation: 0.0,
                 scrolledUnderElevation: 0.0,
