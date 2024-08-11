@@ -14,7 +14,7 @@ class Settings extends _$Settings {
   }
 
   static SettingsModel init() {
-    const defaultValue = SettingsModel(themeMode: ThemeMode.system);
+    const defaultValue = SettingsModel(themeMode: ThemeMode.light);
 
     return defaultValue;
   }
