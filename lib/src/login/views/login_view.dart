@@ -8,49 +8,51 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 64, horizontal: 24),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+      body: Column(
+        children: [
+          Stack(
             children: [
               Image.asset(
-                'assets/logo.png',
-                width: 96,
-              ),
-              SizedBox(
-                height: 24,
+                'assets/institute.jpg',
                 width: double.infinity,
+                height: MediaQuery.of(context).size.height * 0.75,
+                fit: BoxFit.cover,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                child: Text.rich(
-                  TextSpan(
-                    children: <TextSpan>[
-                      TextSpan(
-                        text: 'Please login with your ',
-                      ),
-                      TextSpan(
-                        text: 'Manipal Learner ID',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      TextSpan(
-                        text: ' to access the application.',
-                      ),
-                    ],
-                  ),
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 18),
-                ),
-              ),
-              SizedBox(
-                height: 24,
+              Container(
                 width: double.infinity,
+                height: MediaQuery.of(context).size.height * 0.75,
+                color: Colors.black.withOpacity(0.3),
               ),
-              SubmitButton()
             ],
           ),
-        ),
+          Expanded(
+            child: Container(
+              width: double.infinity,
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 18),
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.surface,
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Use your Manipal Learner ID to get started',
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  SizedBox(
+                    width: double.infinity,
+                    child: SubmitButton(),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

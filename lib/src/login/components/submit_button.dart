@@ -14,7 +14,7 @@ class _SubmitButtonState extends State<SubmitButton> {
 
   @override
   Widget build(BuildContext context) {
-    return FloatingActionButton.extended(
+    return FilledButton.icon(
       onPressed: _loading
           ? null
           : () {
@@ -32,6 +32,12 @@ class _SubmitButtonState extends State<SubmitButton> {
                 },
               );
             },
+      style: FilledButton.styleFrom(
+        padding: EdgeInsets.symmetric(vertical: 15), // Adjust padding as needed
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(4), // Small border radius
+        ),
+      ),
       icon: Padding(
         padding: const EdgeInsets.only(right: 8.0),
         child: const Icon(PhosphorIconsFill.microsoftOutlookLogo),
