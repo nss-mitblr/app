@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:phosphor_flutter/phosphor_flutter.dart';
+
 class ProfileMenuWidget extends StatelessWidget {
   const ProfileMenuWidget({
     Key? key,
@@ -41,7 +43,7 @@ class ProfileMenuWidget extends StatelessWidget {
                   borderRadius: BorderRadius.circular(100),
                   color: Colors.grey.withOpacity(0.1),
                 ),
-                child: const Icon(Icons.arrow_forward,
+                child: Icon(PhosphorIcons.arrowRight(PhosphorIconsStyle.bold),
                     size: 18.0, color: Colors.grey))
             : null,
       ),

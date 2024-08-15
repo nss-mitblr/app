@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+import 'package:phosphor_flutter/phosphor_flutter.dart';
+
 import 'package:nss/src/events/views/event_view.dart';
 import 'package:nss/src/home/views/home_view.dart';
 import 'package:nss/src/navigation/components/keep_alive_page.dart';
@@ -73,21 +75,31 @@ class _NavigationViewState extends State<NavigationView> {
             onDestinationSelected: ((index) {
               _pageController.jumpToPage(index);
             }),
+            labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
             destinations: <NavigationDestination>[
               NavigationDestination(
-                icon: Icon(Icons.explore_outlined),
+                icon: Icon(
+                  PhosphorIconsBold.compass,
+                  size: 28,
+                ),
                 label: 'Events',
                 selectedIcon: Icon(Icons.explore),
               ),
               NavigationDestination(
-                icon: Icon(Icons.home_outlined),
+                icon: Icon(
+                  PhosphorIconsBold.house,
+                  size: 28,
+                ),
                 label: 'Home',
-                selectedIcon: Icon(Icons.home),
+                selectedIcon: Icon(PhosphorIconsFill.house),
               ),
               NavigationDestination(
-                icon: Icon(Icons.person_4_outlined),
+                icon: Icon(
+                  PhosphorIconsBold.user,
+                  size: 28,
+                ),
                 label: 'Profile',
-                selectedIcon: Icon(Icons.person_4),
+                selectedIcon: Icon(PhosphorIconsFill.user),
               ),
             ],
             elevation: 0.0,

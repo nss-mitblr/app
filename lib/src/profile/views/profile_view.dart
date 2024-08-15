@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:phosphor_flutter/phosphor_flutter.dart';
+
 import 'package:nss/src/profile/components/profile_menu_widget.dart';
 
 class ProfileView extends StatelessWidget {
@@ -47,17 +49,17 @@ class ProfileView extends StatelessWidget {
             /// -- MENU
             ProfileMenuWidget(
               title: 'Settings',
-              icon: Icons.settings,
+              icon: PhosphorIcons.gearSix(PhosphorIconsStyle.fill),
               onPressed: () {},
             ),
             ProfileMenuWidget(
               title: 'Academic Details',
-              icon: Icons.school,
+              icon: PhosphorIcons.graduationCap(PhosphorIconsStyle.bold),
               onPressed: () {},
             ),
             ProfileMenuWidget(
               title: 'User Management',
-              icon: Icons.manage_accounts,
+              icon: PhosphorIcons.userGear(PhosphorIconsStyle.fill),
               onPressed: () {},
             ),
             const SizedBox(height: 10),
@@ -65,36 +67,36 @@ class ProfileView extends StatelessWidget {
             const SizedBox(height: 10),
             ProfileMenuWidget(
               title: 'Information',
-              icon: Icons.info,
+              icon: PhosphorIcons.info(PhosphorIconsStyle.fill),
               onPressed: () {},
             ),
             ProfileMenuWidget(
               title: 'Logout',
-              icon: Icons.logout,
+              icon: PhosphorIcons.signOut(PhosphorIconsStyle.bold),
               textColor: Colors.red,
               endIcon: false,
               onPressed: () {},
             ),
             ProfileMenuWidget(
               title: 'Information',
-              icon: Icons.info,
+              icon: PhosphorIcons.info(PhosphorIconsStyle.fill),
               onPressed: () {},
             ),
             ProfileMenuWidget(
               title: 'Logout',
-              icon: Icons.logout,
+              icon: PhosphorIcons.signOut(PhosphorIconsStyle.bold),
               textColor: Colors.red,
               endIcon: false,
               onPressed: () {},
             ),
             ProfileMenuWidget(
               title: 'Information',
-              icon: Icons.info,
+              icon: PhosphorIcons.info(PhosphorIconsStyle.fill),
               onPressed: () {},
             ),
             ProfileMenuWidget(
               title: 'Logout',
-              icon: Icons.logout,
+              icon: PhosphorIcons.signOut(PhosphorIconsStyle.bold),
               textColor: Colors.red,
               endIcon: false,
               onPressed: () {},
