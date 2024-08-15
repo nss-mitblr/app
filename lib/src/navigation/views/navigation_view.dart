@@ -36,7 +36,7 @@ class _NavigationViewState extends State<NavigationView> {
           child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 6, sigmaY: 6),
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(6.0, 6.0, 6.0, 0.0),
+              padding: const EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 0.0),
               child: AppBar(
                 backgroundColor: colorScheme.surface.withOpacity(0.6),
                 title: Image.asset(
