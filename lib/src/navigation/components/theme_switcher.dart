@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:phosphor_flutter/phosphor_flutter.dart';
 
 import 'package:nss/src/settings/controllers/settings_controller.dart';
 
@@ -21,8 +22,8 @@ class ThemeSwitcher extends ConsumerWidget {
         }
       },
       icon: (settings.themeMode == ThemeMode.dark
-          ? Icon(Icons.dark_mode)
-          : Icon(Icons.light_mode)),
+          ? Icon(PhosphorIconsFill.moon)
+          : Icon(PhosphorIconsFill.sun)),
     );
   }
 }
