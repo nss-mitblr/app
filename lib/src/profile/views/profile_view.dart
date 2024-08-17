@@ -16,7 +16,6 @@ class ProfileView extends StatelessWidget {
               height: 84.0,
             ),
 
-            /// -- IMAGE
             SizedBox(
               width: 120,
               height: 120,
@@ -31,72 +30,79 @@ class ProfileView extends StatelessWidget {
             Text('Abhigyan Tripathi',
                 style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold)),
             const SizedBox(height: 8),
-            Text('CSE Cybersecurity (B), 2026',
+            Text('abhigyan@learner.manipal.edu',
                 style: Theme.of(context).textTheme.bodyMedium),
+
             const SizedBox(height: 20),
 
-            SizedBox(
-              width: 200,
-              child: ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                    side: BorderSide.none, shape: const StadiumBorder()),
-                child: const Text('Edit Profile'),
+            Card(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            '120 Hours',
+                            style: TextStyle(
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text('On-Ground')
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 64, child: VerticalDivider()),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            '20 Hours',
+                            style: TextStyle(
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text('Off-Ground')
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
-            const SizedBox(height: 20),
+
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 5.0),
+              child: Divider(),
+            ),
 
             /// -- MENU
             ProfileMenuWidget(
-              title: 'Settings',
-              icon: PhosphorIcons.gearSix(PhosphorIconsStyle.fill),
-              onPressed: () {},
-            ),
-            ProfileMenuWidget(
-              title: 'Academic Details',
-              icon: PhosphorIcons.graduationCap(PhosphorIconsStyle.bold),
-              onPressed: () {},
-            ),
-            ProfileMenuWidget(
-              title: 'User Management',
-              icon: PhosphorIcons.userGear(PhosphorIconsStyle.fill),
-              onPressed: () {},
-            ),
-            const SizedBox(height: 10),
-            const Divider(),
-            const SizedBox(height: 10),
-            ProfileMenuWidget(
-              title: 'Information',
-              icon: PhosphorIcons.info(PhosphorIconsStyle.fill),
-              onPressed: () {},
-            ),
-            ProfileMenuWidget(
-              title: 'Logout',
-              icon: PhosphorIcons.signOut(PhosphorIconsStyle.bold),
-              textColor: Colors.red,
-              endIcon: false,
+              title: 'Volunteer History',
+              icon: PhosphorIcons.handHeart(PhosphorIconsStyle.fill),
               onPressed: () {},
             ),
             ProfileMenuWidget(
               title: 'Information',
-              icon: PhosphorIcons.info(PhosphorIconsStyle.fill),
+              icon: Icons.info,
               onPressed: () {},
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 5.0),
+              child: Divider(),
             ),
             ProfileMenuWidget(
               title: 'Logout',
-              icon: PhosphorIcons.signOut(PhosphorIconsStyle.bold),
-              textColor: Colors.red,
-              endIcon: false,
-              onPressed: () {},
-            ),
-            ProfileMenuWidget(
-              title: 'Information',
-              icon: PhosphorIcons.info(PhosphorIconsStyle.fill),
-              onPressed: () {},
-            ),
-            ProfileMenuWidget(
-              title: 'Logout',
-              icon: PhosphorIcons.signOut(PhosphorIconsStyle.bold),
+              icon: Icons.logout,
               textColor: Colors.red,
               endIcon: false,
               onPressed: () {},
