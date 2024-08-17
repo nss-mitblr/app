@@ -30,7 +30,7 @@ class ProfileView extends StatelessWidget {
             Text('Abhigyan Tripathi',
                 style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold)),
             const SizedBox(height: 8),
-            Text('CSE Cybersecurity (B), 2026',
+            Text('abhigyan@learner.manipal.edu',
                 style: Theme.of(context).textTheme.bodyMedium),
 
             const SizedBox(height: 20),
