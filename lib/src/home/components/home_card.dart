@@ -15,6 +15,7 @@ class HomeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      clipBehavior: Clip.hardEdge,
       child: InkWell(
         onTap: onTap,
         child: Stack(
@@ -37,8 +38,10 @@ class HomeCard extends StatelessWidget {
               right: -25,
               child: Icon(
                 icon,
-                size: 128, // Large size so part of it peeks out
-                color: Colors.grey.withOpacity(0.65), // Optional styling
+                size: 142,
+                color: Theme.of(context).brightness == Brightness.dark
+                    ? Colors.white.withOpacity(0.1)
+                    : Colors.black.withOpacity(0.1),
               ),
             ),
           ],
