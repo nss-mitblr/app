@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 
 import 'package:phosphor_flutter/phosphor_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'package:nss/src/home/components/home_card.dart';
 
 class HomeView extends StatelessWidget {
+  String? encodeQueryParameters(Map<String, String> params) {
+    return params.entries
+        .map((MapEntry<String, String> e) =>
+            '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
+        .join('&');
+  }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -40,7 +48,21 @@ class HomeView extends StatelessWidget {
                   title: 'Our Website',
                   icon: PhosphorIcons.globeHemisphereEast(
                       PhosphorIconsStyle.fill),
-                  onTap: () {},
+                  onTap: () async {
+                    if (!await launchUrl(
+                      new Uri(
+                        scheme: 'https',
+                        host: 'gopassionate331.github.io',
+                      ),
+                      mode: LaunchMode.externalApplication,
+                    )) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text('Failed to open the website.'),
+                        ),
+                      );
+                    }
+                  },
                 ),
                 HomeCard(
                   title: 'Office Bearers',
@@ -50,12 +72,39 @@ class HomeView extends StatelessWidget {
                 HomeCard(
                   title: 'Partner With Us',
                   icon: PhosphorIcons.handWaving(PhosphorIconsStyle.fill),
-                  onTap: () {},
+                  onTap: () async {
+                    await launchUrl(
+                      new Uri(
+                        scheme: 'mailto',
+                        path: 'nss.mitblr@manipal.edu',
+                        query: encodeQueryParameters({
+                          'subject': '[Partnership Request] - ',
+                          'body':
+                              'Hello, I am interested in partnering with you. Please let me know how I can help.'
+                        }),
+                      ),
+                      mode: LaunchMode.externalApplication,
+                    );
+                  },
                 ),
                 HomeCard(
                   title: 'Resource Library',
                   icon: PhosphorIcons.books(PhosphorIconsStyle.fill),
-                  onTap: () {},
+                  onTap: () async {
+                    if (!await launchUrl(
+                      new Uri(
+                        scheme: 'https',
+                        host: 'teams.office.com',
+                      ),
+                      mode: LaunchMode.externalApplication,
+                    )) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text('Failed to open the website.'),
+                        ),
+                      );
+                    }
+                  },
                 ),
               ],
             ),
