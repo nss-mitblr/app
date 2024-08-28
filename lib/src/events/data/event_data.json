@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "Community Cleanup",
+        "description": "Join us in cleaning up the local park.",
+        "date": "2024-09-15",
+        "time": "09:00 AM",
+        "location": "Central Park",
+        "hours": 4,
+        "maxVolunteers": 50
+    },
+    {
+        "id": 2,
+        "title": "Beach Restoration",
+        "description": "Help restore our beautiful beach.",
+        "date": "2024-10-10",
+        "time": "08:30 AM",
+        "location": "Sunny Beach",
+        "hours": 6,
+        "maxVolunteers": 100
+    },
+    {
+        "id": 3,
+        "title": "Tree Planting",
+        "description": "Plant trees to help increase green cover in the city.",
+        "date": "2024-11-20",
+        "time": "10:00 AM",
+        "location": "City Park",
+        "hours": 3,
+        "maxVolunteers": 30
+    }
+]
