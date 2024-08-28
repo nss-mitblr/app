@@ -28,5 +28,75 @@
         "location": "City Park",
         "hours": 3,
         "maxVolunteers": 30
+    },
+    {
+        "id": 4,
+        "title": "Food Drive",
+        "description": "Assist in collecting and distributing food to those in need.",
+        "date": "2024-12-05",
+        "time": "01:00 PM",
+        "location": "Community Center",
+        "hours": 5,
+        "maxVolunteers": 75
+    },
+    {
+        "id": 5,
+        "title": "River Clean-Up",
+        "description": "Join the effort to clean up the riverbank.",
+        "date": "2024-09-25",
+        "time": "08:00 AM",
+        "location": "Riverfront Park",
+        "hours": 4,
+        "maxVolunteers": 60
+    },
+    {
+        "id": 6,
+        "title": "Recycling Workshop",
+        "description": "Learn about recycling and help sort materials.",
+        "date": "2024-10-18",
+        "time": "02:00 PM",
+        "location": "Green Hub",
+        "hours": 3,
+        "maxVolunteers": 40
+    },
+    {
+        "id": 7,
+        "title": "Wildlife Conservation",
+        "description": "Participate in wildlife habitat restoration.",
+        "date": "2024-11-05",
+        "time": "09:00 AM",
+        "location": "Nature Reserve",
+        "hours": 6,
+        "maxVolunteers": 50
+    },
+    {
+        "id": 8,
+        "title": "Library Organization",
+        "description": "Help organize and catalog books at the local library.",
+        "date": "2024-09-30",
+        "time": "11:00 AM",
+        "location": "City Library",
+        "hours": 4,
+        "maxVolunteers": 20
+    },
+    {
+        "id": 9,
+        "title": "Senior Center Visit",
+        "description": "Spend time with seniors at the local senior center.",
+        "date": "2024-10-22",
+        "time": "03:00 PM",
+        "location": "Senior Center",
+        "hours": 2,
+        "maxVolunteers": 15
+    },
+    {
+        "id": 10,
+        "title": "Community Garden",
+        "description": "Assist in maintaining the community garden.",
+        "date": "2024-11-12",
+        "time": "09:30 AM",
+        "location": "Community Garden",
+        "hours": 3,
+        "maxVolunteers": 25
     }
 ]
