@@ -19,7 +19,7 @@ class NavigationView extends StatefulWidget {
 
 class _NavigationViewState extends State<NavigationView> {
   final List<Widget> _views = <Widget>[
-    KeepAlivePage(child: EventView()),
+    KeepAlivePage(child: EventsView()),
     KeepAlivePage(child: HomeView()),
     KeepAlivePage(child: ProfileView()),
   ];
