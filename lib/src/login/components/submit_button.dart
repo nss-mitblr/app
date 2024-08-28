@@ -34,15 +34,21 @@ class _SubmitButtonState extends State<SubmitButton> {
             },
       style: FilledButton.styleFrom(
         backgroundColor: Color(0xFF2D2F8C),
-        padding: EdgeInsets.symmetric(vertical: 15), // Adjust padding as needed
+        padding: EdgeInsets.symmetric(vertical: 15),
+        iconColor: Colors.white,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8), // Small border radius
+          borderRadius: BorderRadius.circular(8),
         ),
       ),
-      icon: Padding(
-        padding: const EdgeInsets.only(right: 4.0),
-        child: const Icon(PhosphorIconsFill.microsoftOutlookLogo),
-      ),
+      icon: _loading
+          ? null
+          : const Padding(
+              padding: EdgeInsets.only(right: 4.0),
+              child: Icon(
+                PhosphorIconsFill.microsoftOutlookLogo,
+                color: Colors.white,
+              ),
+            ),
       label: _loading
           ? const Text(
               'Loading...',
@@ -50,7 +56,7 @@ class _SubmitButtonState extends State<SubmitButton> {
             )
           : const Text(
               'Login with Outlook',
-              style: TextStyle(fontSize: 16),
+              style: TextStyle(fontSize: 16, color: Colors.white),
             ),
     );
   }
