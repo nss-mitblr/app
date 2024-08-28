@@ -34,5 +34,6 @@ dev_dependencies:
 flutter:
   assets:
     - assets/
+    - lib/src/events/data/event_data.json
 
   uses-material-design: true
