@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import 'package:nss/src/home/components/home_card.dart';
 
 class HomeView extends StatelessWidget {
@@ -19,6 +17,8 @@ class HomeView extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.all(18.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(
               height: 84.0,
