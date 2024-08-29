@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nss/src/events/components/event_register_button.dart';
 
 import 'package:nss/src/events/models/event_model.dart';
 
@@ -26,10 +27,16 @@ class _EventCardState extends State<EventCard> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text(
-                  widget.event.title,
-                  style: const TextStyle(
-                      fontWeight: FontWeight.bold, fontSize: 20.0),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      widget.event.title,
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 20.0),
+                    ),
+                    RegistrationButton(),
+                  ],
                 ),
                 Row(
                   children: [
