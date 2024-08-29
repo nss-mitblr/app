@@ -13,6 +13,10 @@ class _RegistrationButtonState extends State<RegistrationButton> {
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton.small(
+      elevation: 0.0,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
       onPressed: _loading
           ? null
           : () {
@@ -22,18 +26,21 @@ class _RegistrationButtonState extends State<RegistrationButton> {
 
               // Simulate a delay for the loading animation
               Future.delayed(Duration(seconds: 2), () {
-                setState(() {
-                  _loading = false;
-                  _completed = true;
-                });
+                if (mounted) {
+                  // Check if the widget is still in the tree
+                  setState(() {
+                    _loading = false;
+                    _completed = true;
+                  });
+                }
               });
             },
       child: AnimatedSwitcher(
         duration: Duration(milliseconds: 300),
         child: _loading
             ? SizedBox(
-                width: 24,
-                height: 24,
+                width: 12,
+                height: 12,
                 child: CircularProgressIndicator(
                   strokeWidth: 2,
                   color: Colors.white,
