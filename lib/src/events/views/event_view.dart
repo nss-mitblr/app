@@ -27,8 +27,8 @@ class EventsView extends ConsumerWidget {
               ),
             ),
             Text('Here are the upcoming events you can volunteer for.'),
-            const SizedBox(
-                height: 20.0), // Add spacing between text and EventList
+            // const SizedBox(
+            //     height: 5.0), // Add spacing between text and EventList
             Expanded(
               child: EventList(events: data),
             ),

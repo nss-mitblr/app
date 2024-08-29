@@ -31,29 +31,76 @@ class _EventCardState extends State<EventCard> {
                   style: const TextStyle(
                       fontWeight: FontWeight.bold, fontSize: 20.0),
                 ),
-                SizedBox(
-                  height: 4,
+                Row(
+                  children: [
+                    Icon(Icons.location_on_outlined, size: 18.0),
+                    Text(widget.event.location),
+                  ],
                 ),
-                Text(widget.event.location),
                 SizedBox(
-                  height: 8,
+                  height: 16,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 2.0),
+                  child: Row(
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.only(right: 4.0),
+                        child: Icon(Icons.calendar_month_outlined, size: 18.0),
+                      ),
+                      Text(widget.event.date),
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  width: 16,
                 ),
                 Row(
                   children: [
-                    const Padding(
-                      padding: EdgeInsets.only(right: 4.0),
-                      child: Icon(Icons.alarm, size: 18.0),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 2.0),
+                      child: Row(
+                        children: [
+                          const Padding(
+                            padding: EdgeInsets.only(right: 4.0),
+                            child: Icon(Icons.alarm, size: 18.0),
+                          ),
+                          Text('${widget.event.time.toString()}'),
+                        ],
+                      ),
                     ),
-                    Text(widget.event.date),
-                    const Text(' • '),
-                    const Padding(
-                      padding: EdgeInsets.only(right: 4.0),
-                      child: Icon(Icons.people, size: 18.0),
+                    const SizedBox(
+                      width: 16,
                     ),
-                    Text(
-                        '${widget.event.maxVolunteers.toString()} registrations'),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 2.0),
+                      child: Row(
+                        children: [
+                          const Padding(
+                            padding: EdgeInsets.only(right: 4.0),
+                            child: Icon(Icons.hourglass_bottom_outlined,
+                                size: 18.0),
+                          ),
+                          Text('${widget.event.hours.toString()} hours'),
+                        ],
+                      ),
+                    )
                   ],
-                )
+                ),
+                // const Text(' • '),
+                // Padding(
+                //   padding: const EdgeInsets.symmetric(vertical: 2.0),
+                //   child: Row(
+                //     children: [
+                //       const Padding(
+                //         padding: EdgeInsets.only(right: 4.0),
+                //         child: Icon(Icons.people, size: 18.0),
+                //       ),
+                //       Text(
+                //           '${widget.event.maxVolunteers.toString()} registrations'),
+                //     ],
+                //   ),
+                // )
               ],
             ),
           ),
