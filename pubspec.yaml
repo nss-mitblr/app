@@ -38,5 +38,6 @@ flutter:
   assets:
     - assets/
     - lib/src/events/data/event_data.json
+    - lib/src/history/data/volunteer_history_data.json
 
   uses-material-design: true

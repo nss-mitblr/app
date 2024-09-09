@@ -93,8 +93,7 @@ class _EventCardState extends State<EventCard> {
                       ),
                     )
                   ],
-                ),
-                // const Text(' • '),
+                ), // const Text(' • '),
                 // Padding(
                 //   padding: const EdgeInsets.symmetric(vertical: 2.0),
                 //   child: Row(
