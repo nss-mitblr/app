@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:nss/src/history/views/volunteer_history_view.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 
 import 'package:nss/src/profile/components/profile_menu_widget.dart';
@@ -89,7 +89,12 @@ class ProfileView extends StatelessWidget {
             ProfileMenuWidget(
               title: 'Volunteer History',
               icon: PhosphorIcons.handHeart(PhosphorIconsStyle.fill),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => VolunteerHistoryView()));
+              },
             ),
             ProfileMenuWidget(
               title: 'Information',
